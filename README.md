@@ -3,9 +3,8 @@
 Projeto desenvolvido em 2023 como PPI (Projeto Prático Interdisciplinar):
 site em PHP + MySQL para agendamento de coleta de lixo eletrônico.
 
-Esta versão passou por uma **limpeza para publicação** — correção de bugs
-de lógica, remoção de código morto e separação das credenciais — mantendo
-a arquitetura original de 2023. A lista completa do que mudou está em
+Esta versão passou por uma correção de bugs de lógica, remoção de código morto e separação das credenciais — mantendo
+a arquitetura original. A lista completa do que mudou está em
 [CHANGES.md](CHANGES.md). Uma modernização (PHP 8.3+, depois Laravel) está
 planejada — ver *Roadmap*.
 
@@ -48,8 +47,6 @@ PPI/
 5. Acesse `http://localhost/PPI/PAGINICIAL/index.php`
 
 ## Limitações conhecidas
-
-Este código preserva a arquitetura de 2023 e **não deve ir a produção**:
 
 - Queries SQL concatenam entrada do usuário (vulnerável a SQL injection)
 - Senhas armazenadas em texto puro (sem `password_hash()`)
