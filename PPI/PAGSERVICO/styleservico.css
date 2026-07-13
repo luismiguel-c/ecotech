@@ -1,0 +1,329 @@
+   .text-right{
+    margin-right: 100px;
+  }
+  .img-right{
+    margin-left: 170px;
+    width: 25%;
+    float: left;
+  }
+  .text-left {
+    margin-left: 100px;
+  }
+  .img-left{
+    float: right;
+    width: 25%;
+    margin-right: 170px;
+  }
+    .text-left2 {
+    margin-left: 900px;
+  }
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.a1 {font-size: 20px;}
+.a2 {font-size: 20px; width: 800px;}
+.a3{
+  color: #2D692F;
+}
+
+.green-box {
+  background-color: #a2e665; /* Cor de fundo verde claro */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 100%; /* Ocupar 100% da largura da página */
+}
+.center-text {
+    text-align: center;
+  }
+.green-button {
+    margin-left: 130px;
+    display: inline-block;
+    padding: 10px 60px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .green-button:hover {
+    transform: scale(1.1);
+  }
+  .right-image {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+  }
+  .aa {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.4s ease-in-out, color 0.3s;
+  }
+
+.aa:hover {
+    transform: scale(1.1);
+    color: #1d4f20; 
+  }
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 5px 0;
+  transition: top 0.3s;
+  z-index: 1;
+}
+
+/* Estilos para a imagem no canto esquerdo */
+.navbar img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 10px 10px 15px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Estilos para a borda em degradê */
+.border-gradient {
+  position: fixed;
+  top: 0; /* Posição vertical inicial da borda */
+  left: 0;
+  width: 100%;
+  height: 120px; /* Altura da borda */
+  background-image: linear-gradient(to bottom, #333, transparent); /* Degradê */
+  z-index: 0;
+}
+
+  /* Estilos para o texto ao lado da logo */
+  .navbar .logo-text {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+
+  /* Estilos para os links na navbar */
+  .navbar a {
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, font-size 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+  }
+
+    .navbar a:hover {
+    font-size: 18px; /* Tamanho maior da letra ao passar o mouse */
+  }
+
+  /* Estilo quando o mouse passa por cima dos links na navbar */
+
+  /* Estilo para os botões na navbar */
+  .navbar .button {
+    background-color: #2e8540; /* Cor de fundo dos botões */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Faz os botões ficarem arredondados */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); /* Adiciona uma transição suave para a mudança de cor de fundo */
+  }
+
+  /* Estilo quando o mouse passa por cima dos botões na navbar */
+  .navbar .button:hover {
+    background-color: darkgreen; /* Nova cor de fundo ao passar o mouse */
+  }
+
+  /* Estilo para o botão "Entrar" */
+  .navbar .login-button {
+    background-color: transparent; /* Cor de fundo transparente */
+    color: #4CAF50; /* Cor do texto do botão "Entrar" */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor do texto */
+  }
+
+  /* Estilo quando o mouse passa por cima do botão "Entrar" na navbar */
+  .navbar .login-button:hover {
+    color: darkgreen; /* Nova cor do texto ao passar o mouse */
+  }
+.circle-container {
+  display: flex;
+  gap: 300px;
+  margin-left: 0px; /* Adicione a margem desejada aqui */
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #a2e665;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+/*BOTÃO DE ROLAR */
+
+.circle-container {
+  /* Seus estilos para o container de círculos */
+}
+
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  gap: 170px; /* Espaço entre os textos */
+  margin-left: 200;
+}
+
+.text {
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid #a2e665;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50; /* Cor do círculo */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white; /* Cor da seta */
+}
+.contact-support {
+  background-color: #ccc;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-content {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #1b5e20;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #13532d;
+}
+
+
+.servicos-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.servicos-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f0f0f0; /* Fundo cinza */
+    border: 1px solid #ccc;
+    padding: 10px; /* Padding inicial */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* Bordas arredondadas */
+    opacity: 0;
+    transform: scale(0.9); /* Escala inicial para criar o efeito de crescimento */
+    transform-origin: top right;
+    transition: opacity 0.2s, transform 0.2s, padding 0.2s; /* Adiciona animação suave para opacity, transform e padding */
+}
+
+.servicos-dropdown:hover .servicos-content,
+.servicos-content:hover {
+    display: block;
+    opacity: 1;
+    transform: scale(1); /* Mostra o menu expandindo */
+    padding: 25px; /* Aumenta o padding quando o mouse passa sobre */
+}
+
+.servicos-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.servicos-content li {
+    margin: 5px 0;
+}
+
+.servicos-content a {
+    text-decoration: none;
+    color: #007700; /* Texto verde escuro */
+}
+
+.servicos-content a:hover {
+    text-decoration: underline;
+}
+
+.user-info {
+    display: inline-block;
+    position: relative;
+}
+
+.logout-button {
+    display: none;
+    position: absolute;
+    top: 20px; /* Ajuste a posição conforme necessário */
+    right: 0;
+    color: darkgreen; /* Cor do texto do botão de sair */
+    text-decoration: none;
+}
+
+.user-info:hover .logout-button {
+    display: block;
+}

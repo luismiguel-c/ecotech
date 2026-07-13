@@ -1,0 +1,19 @@
+# Credenciais do banco (use config.example.php como modelo)
+PPI/config.php
+
+# Conteúdo enviado por usuários (fotos de perfil etc.)
+PPI/PAGAGENDAMENTO/uploads/
+
+# Sistema operacional
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores/IDEs
+.vscode/
+.idea/
+
+# Futuro (modernização PHP)
+vendor/
+node_modules/
+.env

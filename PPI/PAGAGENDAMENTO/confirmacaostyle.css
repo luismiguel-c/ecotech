@@ -1,0 +1,172 @@
+   .text-right{
+    margin-right: 100px;
+  }
+  .text-left {
+    margin-left: 100px;
+  }
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.a1 {font-size: 20px;}
+.a2 {font-size: 35px;
+width: 500px;}
+.a3{
+  color: #2D692F;
+}
+
+.green-box {
+  background-color: #a2e665; /* Cor de fundo verde claro */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 100%; /* Ocupar 100% da largura da página */
+}
+.center-text {
+    text-align: center;
+  }
+.green-button {
+    margin-left: 130px;
+    display: inline-block;
+    padding: 10px 60px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .green-button:hover {
+    transform: scale(1.1);
+  }
+  .right-image {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+  }
+  .aa {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.4s ease-in-out, color 0.3s;
+  }
+
+.aa:hover {
+    transform: scale(1.1);
+    color: #1d4f20; 
+  }
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  transition: top 0.3s;
+  z-index: 1;
+}
+
+/* Estilos para a imagem no canto esquerdo */
+.navbar img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 10px 10px 15px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Estilos para a borda em degradê */
+.border-gradient {
+  position: fixed;
+  top: 0; /* Posição vertical inicial da borda */
+  left: 0;
+  width: 100%;
+  height: 120px; /* Altura da borda */
+  background-image: linear-gradient(to bottom, #333, transparent); /* Degradê */
+  z-index: 0;
+}
+
+  /* Estilos para o texto ao lado da logo */
+  .navbar .logo-text {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+
+  /* Estilos para os links na navbar */
+  .navbar a {
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, font-size 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+  }
+
+    .navbar a:hover {
+    font-size: 18px; /* Tamanho maior da letra ao passar o mouse */
+  }
+
+  /* Estilo quando o mouse passa por cima dos links na navbar */
+
+  /* Estilo para os botões na navbar */
+  .navbar .button {
+    background-color: #2e8540; /* Cor de fundo dos botões */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Faz os botões ficarem arredondados */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); /* Adiciona uma transição suave para a mudança de cor de fundo */
+  }
+
+  /* Estilo quando o mouse passa por cima dos botões na navbar */
+  .navbar .button:hover {
+    background-color: darkgreen; /* Nova cor de fundo ao passar o mouse */
+  }
+
+  /* Estilo para o botão "Entrar" */
+  .navbar .login-button {
+    background-color: transparent; /* Cor de fundo transparente */
+    color: #4CAF50; /* Cor do texto do botão "Entrar" */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor do texto */
+  }
+
+  /* Estilo quando o mouse passa por cima do botão "Entrar" na navbar */
+  .navbar .login-button:hover {
+    color: darkgreen; /* Nova cor do texto ao passar o mouse */
+  }
+
+body {
+    background-color: #F5EFE0; /* Bege */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.confirmacao-container {
+    background-color: #2e8540; /* Verde Claro */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: move 5s ease infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-12px);
+    }
+    100% {
+        transform: translateX(12px);
+    }
+}
