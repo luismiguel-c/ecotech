@@ -13,6 +13,11 @@
         <input type="password" name="senha" required><br>
 
         <input type="submit" value="Entrar">
+
+        <p style="text-align:center; margin-top:16px;">
+            Não tem uma conta? <a href="criarconta.php">Criar conta</a>
+        </p>
     </form>
+    
 </body>
 </html>
