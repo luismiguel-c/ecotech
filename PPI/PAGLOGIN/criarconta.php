@@ -10,10 +10,10 @@
         <input type="text" name="nome_completo" required><br>
 
         <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" required><br>
-
+        <input type="text" name="cpf" id="cpf" required><br>
+        
         <label for="telefone">Telefone:</label>
-        <input type="text" name="telefone" required><br>
+        <input type="text" name="telefone" id="telefone" required><br>
 
         <label for="endereco">Endereço:</label>
         <input type="text" name="endereco" required><br>
@@ -26,5 +26,28 @@
 
         <input type="submit" value="Cadastrar">
     </form>
+    <script>
+
+    const cpf = document.getElementById('cpf');
+    if (cpf) {
+        cpf.addEventListener('input', function () {
+            let v = this.value.replace(/\D/g, '').slice(0, 11);
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            this.value = v;
+        });
+    }
+
+    const tel = document.getElementById('telefone');
+    if (tel) {
+        tel.addEventListener('input', function () {
+            let v = this.value.replace(/\D/g, '').slice(0, 11);
+            v = v.replace(/(\d{2})(\d)/, '($1) $2');
+            v = v.replace(/(\d{5})(\d)/, '$1-$2');
+            this.value = v;
+        });
+    }
+        </script>
 </body>
 </html>
