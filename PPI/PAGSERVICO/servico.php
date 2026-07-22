@@ -45,6 +45,7 @@
         if (isset($_SESSION['id'])) {
             // Se o usuário estiver logado, mostre o link para o perfil
             echo '<a href="/PPI/PAGAGENDAMENTO/perfil.php" class="aa" style="margin-right:200px;">Perfil</a>';
+            echo '<a href="/PPI/PAGAGENDAMENTO/MeusAgendamentos.php" class="aa">Meus Agendamentos</a>';
         }
         ?>
     <?php

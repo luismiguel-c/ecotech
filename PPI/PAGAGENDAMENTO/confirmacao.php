@@ -16,6 +16,7 @@
   <a href="/PPI/PAGINICIAL/index.php" class="aa">Início</a>
   <a href="/PPI/PAGSERVICO/servico.php" class="aa">Serviço</a>
   <a href="perfil.php" class="aa" style="margin-right:200px;">Perfil</a>
+  <a href="/PPI/PAGAGENDAMENTO/MeusAgendamentos.php" class="aa">Meus Agendamentos</a>
   <?php
         if (isset($_SESSION['nome'])) {
             echo '<span class="user-name">' . $_SESSION['nome'] . '</span>';

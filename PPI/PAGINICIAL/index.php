@@ -35,6 +35,7 @@ session_start();
 
   <?php
 echo '<a href="/PPI/PAGAGENDAMENTO/perfil.php" class="aa" style="margin-right:200px;">Perfil</a>';
+echo '<a href="/PPI/PAGAGENDAMENTO/MeusAgendamentos.php" class="aa">Meus Agendamentos</a>';
 if (isset($_SESSION['nome'])) {
   echo '<div class="user-info">';
   echo '<span class="user-name">' . $_SESSION['nome'] . '</span>';

@@ -71,6 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
     }
     if (isset($_SESSION['nome'])) {
+         echo '<a href="/PPI/PAGAGENDAMENTO/MeusAgendamentos.php" class="aa">Meus Agendamentos</a>';
         echo '<div class="user-info">';
         echo '<span class="user-name">' . $_SESSION['nome'] . '</span>';
         echo '<a href="sair.php" class="logout-button">Sair</a>';
