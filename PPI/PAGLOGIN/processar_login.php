@@ -4,8 +4,10 @@ require __DIR__ . "/../conexao.inc.php";
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
-$sql = "SELECT id, nome_completo FROM usuarios WHERE email = \x27$email\x27 AND senha = \x27$senha\x27";
-$result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT id, nome_completo FROM usuarios WHERE email = ? AND senha = ?");
+$stmt->bind_param("ss", $email, $senha);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result && $result->num_rows == 1) {
     $row = $result->fetch_assoc();

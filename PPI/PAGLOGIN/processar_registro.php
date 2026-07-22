@@ -8,12 +8,11 @@ $endereco = $_POST["endereco"];
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
-$sql = "INSERT INTO usuarios (nome_completo, cpf, telefone, endereco, email, senha)
-        VALUES (\x27$nome_completo\x27, \x27$cpf\x27, \x27$telefone\x27, \x27$endereco\x27, \x27$email\x27, \x27$senha\x27)";
+$stmt = $conn->prepare("INSERT INTO usuarios (nome_completo, cpf, telefone, endereco, email, senha) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssss", $nome_completo, $cpf, $telefone, $endereco, $email, $senha);
 
-if ($conn->query($sql) === TRUE) {
+if ($stmt->execute()) {
     $conn->close();
-    // Bug corrigido: havia um echo antes do header(), o que impedia o redirect
     header("Location: teladelogin.php");
     exit();
 }

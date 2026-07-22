@@ -5,11 +5,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_SESSION['id'])) {
         $usuario_id = $_SESSION['id'];
 
-        // Bug corrigido: a checagem antiga consultava uma coluna "cpf" que não
-        // existe na tabela agendamentos (e o formulário nem envia CPF), então a
-        // verificação de duplicidade nunca funcionava.
-        $sql = "SELECT id FROM agendamentos WHERE usuario_id = $usuario_id";
-        $result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT id FROM agendamentos WHERE usuario_id = ?");
+$stmt->bind_param("i", $usuario_id);
+$stmt->execute();
+$result = $stmt->get_result();
 
         if ($result && $result->num_rows > 0) {
             echo "Você já possui um agendamento ativo.";
@@ -20,13 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $instrucoes = $_POST["instrucoes"];
             $concordo_checkbox = isset($_POST["concordo_checkbox"]) ? 1 : 0;
 
-            // Adicionei a vírgula após 'tamanho'
-            $sql = "INSERT INTO agendamentos (tipo_lixo, quantidade, tamanho, instrucoes, concordo_checkbox, usuario_id) 
-                    VALUES ('$tipo_lixo', $quantidade, '$tamanho', '$instrucoes', $concordo_checkbox, $usuario_id)";
-    
-            if ($conn->query($sql) === TRUE) {
-                // Bug corrigido: havia um echo antes do header(), o que
-                // impedia o redirecionamento ("headers already sent")
+            $stmt = $conn->prepare("INSERT INTO agendamentos (tipo_lixo, quantidade, tamanho, instrucoes, concordo_checkbox, usuario_id) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("sissii", $tipo_lixo, $quantidade, $tamanho, $instrucoes, $concordo_checkbox, $usuario_id);
+
+            if ($stmt->execute()) {
                 header("Location: confirmacao.php");
                 exit();
             } else {
